@@ -1,6 +1,8 @@
 apiVersion: kpt.dev/v1
 kind: Kptfile
 metadata:
-  name: sample-configuration
+  name: anthos-acm
+  annotations:
+    config.kubernetes.io/local-config: "true"
 info:
-  description: Sample Kubernetes Configuration
+  description: sample description
