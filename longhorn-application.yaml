@@ -1,0 +1,51 @@
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: "66storedge"
+  labels:
+    app.kubernetes.io/name: "66storedge"
+spec:
+  selector:
+    matchLabels:
+     app.kubernetes.io/name: "66storedge"
+  componentKinds:
+    - group: apiextensions.k8s.io/v1
+      kind: CustomResourceDefinition
+    - group: apps/v1
+      kind: Deployment
+    - group: v1
+      kind: Service
+    - group: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+    - group: v1
+      kind: ConfigMap
+    - group: apps/v1
+      kind: DaemonSet
+    - group: v1
+      kind: ServiceAccount
+    - group: rbac.authorization.k8s.io/v1
+      kind: ClusterRole
+    - group: v1
+      kind: Namespace
+  addOwnerRef: true
+  descriptor:
+    type: "66storedge"
+    keywords:
+      - "storage"
+      - "edge"
+      - "block storage"
+    links:
+      - description: About
+        url: "https://66degrees.com/66storedge"
+    version: "1.0.0"
+    description: "66StorEdge is an Hybrid Cloud storage solution"
+    icons:
+      - src: "https://66degrees.com/wp-content/uploads/2021/12/66degrees_RGB_Brandmark_Horizontal_OneColor.png"
+        type: "image/png"
+        size: "2734x648"
+    maintainers:
+      - name: 66Degrees - Office of the CTO
+        email: octo@66degrees.com
+    owners:
+      - name: 66Degrees - Office of the CTO
+        email: octo@66degrees.com

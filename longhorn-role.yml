@@ -5,7 +5,7 @@ kind: ClusterRole
 metadata:
   name: longhorn-role
   labels:
-    app.kubernetes.io/name: longhorn
+    app.kubernetes.io/name: 66storedge
     app.kubernetes.io/instance: longhorn
     app.kubernetes.io/version: v1.4.0-dev
 rules:
